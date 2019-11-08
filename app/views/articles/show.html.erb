@@ -10,5 +10,12 @@
   <%= @article.body %>
 </p>
 
+
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @article.photo %>)">
+  Breakfast
+</div>
+
+<%= image_tag @article.photo.url(:bright_face) %>
+
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', root_path %>
